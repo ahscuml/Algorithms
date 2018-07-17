@@ -30,25 +30,25 @@ public class QuickSort3Ways {
         // gt从r+1开始
         int lt = l, gt = r + 1, i = l + 1;
         while (i < gt) {
-            if(v.compareTo(arr[i]) > 0) {
+            if (v.compareTo(arr[i]) > 0) {
                 lt++;
-                swap(arr,i,lt);
+                swap(arr, i, lt);
                 i++;
-            } else if(v.compareTo(arr[i]) < 0) {
+            } else if (v.compareTo(arr[i]) < 0) {
                 // 交换了一个没有判断过的元素到i，所以i不用+1！
                 gt--;
-                swap(arr,i,gt);
+                swap(arr, i, gt);
             } else {
                 // 两个元素相等的情况，不用进行交换
                 i++;
             }
         }
         // 将第一个元素交换到=v的位置
-        swap(arr,l,lt);
+        swap(arr, l, lt);
         lt--;
         // 递归调用
-        sort(arr,l,lt);
-        sort(arr,gt,r);
+        sort(arr, l, lt);
+        sort(arr, gt, r);
     }
 
     /**

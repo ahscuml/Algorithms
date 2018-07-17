@@ -8,7 +8,9 @@ import java.lang.reflect.Method;
  * @time 19:30
  */
 public class SortTestHelper {
-    private SortTestHelper(){}
+    private SortTestHelper() {
+    }
+
     /**
      * 生成有N个元素的随机数组
      */
@@ -74,23 +76,23 @@ public class SortTestHelper {
             e.printStackTrace();
         }
     }
+
     // 生成一个完全有序的数组
-    public static Integer[] generateOrderedArray( int n ){
+    public static Integer[] generateOrderedArray(int n) {
 
         return generateNearlyOrderdArray(n, 0);
     }
 
     // 生成一个完全逆序的数组
-    public static Integer[] generateInversedArray( int n ){
+    public static Integer[] generateInversedArray(int n) {
 
-        Integer[] arr = generateOrderedArray( n );
-        for( int i = n/2 - 1 ; i >= 0 ; i -- ){
+        Integer[] arr = generateOrderedArray(n);
+        for (int i = n / 2 - 1; i >= 0; i--) {
             Integer t = arr[i];
-            arr[i] = arr[n-i-1];
-            arr[n-i-1] = t;
+            arr[i] = arr[n - i - 1];
+            arr[n - i - 1] = t;
         }
         return arr;
     }
-
 }
 

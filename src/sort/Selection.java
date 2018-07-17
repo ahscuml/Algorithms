@@ -8,7 +8,8 @@ package sort;
  * @time 12:40
  */
 public class Selection {
-    private Selection() {}
+    private Selection() {
+    }
 
     public static Comparable selection(Comparable[] arr, int k) {
         int n = arr.length;
@@ -33,10 +34,10 @@ public class Selection {
         if (l == r) {
             return arr[l];
         }
-        if (j  < k) {
+        if (j < k) {
             return selection(arr, j + 1, r, k);
         } else if (j > k) {
-            return selection(arr,l,j - 1,k);
+            return selection(arr, l, j - 1, k);
         } else {
             return arr[j];
         }
@@ -52,10 +53,10 @@ public class Selection {
     }
 
     // 生成一个完全有序的数组
-    public static Integer[] generateOrderedArray( int n ){
+    public static Integer[] generateOrderedArray(int n) {
 
         Integer[] arr = new Integer[n];
-        for( int i = 0 ; i < n ; i ++ ) {
+        for (int i = 0; i < n; i++) {
             arr[i] = new Integer(i);
         }
 
@@ -63,11 +64,11 @@ public class Selection {
     }
 
     // 将数组arr随机化
-    private static void shuffleArray( Object[] arr ){
+    private static void shuffleArray(Object[] arr) {
 
         int n = arr.length;
-        for( int i = 0 ; i < n ; i ++ ){
-            int j = (int)(Math.random() * (n-i)) + i;
+        for (int i = 0; i < n; i++) {
+            int j = (int) (Math.random() * (n - i)) + i;
 
             Object t = arr[i];
             arr[i] = arr[j];
@@ -92,6 +93,6 @@ public class Selection {
         System.out.println("Test selection completed.");
         System.out.println();*/
 
-        System.out.println(selection(arr,4));
+        System.out.println(selection(arr, 4));
     }
 }

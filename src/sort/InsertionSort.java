@@ -6,7 +6,9 @@ package sort;
  * @time 16:28
  */
 public class InsertionSort {
-    private InsertionSort(){}
+    private InsertionSort() {
+    }
+
     public static void main(String[] args) {
         int N = 20000;
         Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
@@ -15,7 +17,7 @@ public class InsertionSort {
 
     /**
      * 每次比较都要进行交换的排序算法
-     * */
+     */
     public static void insertionSort(Comparable[] arr) {
         int n = arr.length;
         //i从1开始
@@ -29,6 +31,7 @@ public class InsertionSort {
     /**
      * 优化插入排序算法(减少交换次数，通过增加空间复杂度减少时间复杂度)
      * 注意j的数值大小
+     *
      * @param arr 数组
      */
     public static void sort(Comparable[] arr) {

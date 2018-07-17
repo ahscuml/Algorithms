@@ -13,8 +13,8 @@ public class MergeSortBU {
 
     /**
      * 自底向上的归并算法
-     * */
-    public static void sort(Comparable[] arr){
+     */
+    public static void sort(Comparable[] arr) {
 
         int n = arr.length;
 
@@ -26,20 +26,21 @@ public class MergeSortBU {
 
         // Merge Sort Bottom Up 优化
         // 对于小数组, 使用插入排序优化
-        for( int i = 0 ; i < n ; i += 16 ) {
-            insertionSort(arr, i, Math.min(i+15, n-1) );
+        for (int i = 0; i < n; i += 16) {
+            insertionSort(arr, i, Math.min(i + 15, n - 1));
         }
-        for( int sz = 16; sz < n ; sz += sz ) {
-            for( int i = 0 ; i < n - sz ; i += sz+sz )
-                // 对于arr[mid] <= arr[mid+1]的情况,不进行merge
+        for (int sz = 16; sz < n; sz += sz) {
+            for (int i = 0; i < n - sz; i += sz + sz)
+            // 对于arr[mid] <= arr[mid+1]的情况,不进行merge
             {
-                if( arr[i+sz-1].compareTo(arr[i+sz]) > 0 ) {
-                    merge(arr, i, i+sz-1, Math.min(i+sz+sz-1,n-1) );
+                if (arr[i + sz - 1].compareTo(arr[i + sz]) > 0) {
+                    merge(arr, i, i + sz - 1, Math.min(i + sz + sz - 1, n - 1));
                 }
             }
         }
 
     }
+
     /**
      * 归并操作
      */
@@ -65,11 +66,12 @@ public class MergeSortBU {
             }
         }
     }
+
     /**
      * 优化使用的插入排序
-     * */
+     */
     private static void insertionSort(Comparable[] arr, int l, int r) {
-        for (int i = l +1; i <= r; i++) {
+        for (int i = l + 1; i <= r; i++) {
             Comparable e = arr[i];
             int j = i;
             for (; j > l; j--) {
@@ -82,6 +84,7 @@ public class MergeSortBU {
             arr[j] = e;
         }
     }
+
     /**
      * 测试用例
      */

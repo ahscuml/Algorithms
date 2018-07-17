@@ -80,6 +80,5 @@ public class QuickSort {
         int N = 1000000;
         Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
         SortTestHelper.testSort("sort.QuickSort", arr);
-        return;
     }
 }

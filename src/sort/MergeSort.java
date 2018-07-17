@@ -25,7 +25,7 @@ public class MergeSort {
         }
         // int mid = (r - l) / 2 + l;
         int mid = (l + r) / 2;
-        sort(arr, l, mid );
+        sort(arr, l, mid);
         sort(arr, mid + 1, r);
         // 优化1：如果已经有序就不进行归并了。
         if (arr[mid].compareTo(arr[mid + 1]) > 0) {
@@ -85,14 +85,13 @@ public class MergeSort {
             arr[j] = e;
         }
     }
+
     /**
      * 测试用例
-     * */
+     */
     public static void main(String[] args) {
         int N = 20000;
         Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
         SortTestHelper.testSort("sort.MergeSort", arr);
     }
-
-
 }

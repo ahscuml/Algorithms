@@ -23,7 +23,7 @@ public class QuickSortNearlyOrded {
         if (r - l <= size - 1) {
             insertionSort(arr, l, r);
         }
-        if(l>=r) {
+        if (l >= r) {
             return;
         }
         int p = partition(arr, l, r);
