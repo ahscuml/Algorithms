@@ -19,6 +19,7 @@ public class ShellSort {
             h = 3 * h + 1;
         }
         while (h >= 1) {
+            // 排序是从h到n
             for (int i = h; i < n; i++) {
                 Comparable e = arr[i];
                 int j = i;
