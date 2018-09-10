@@ -1,4 +1,5 @@
 慕课网[《算法与数据结构》](http://coding.imooc.com/class/71.html) Java 代码，虽然讲师已经给出最佳代码，仍然自己写一遍，帮助记忆。
+同时放在了自己的[博客](https://ahscuml.github.io/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/)上
 # 排序
 O(n²) 时间复杂度
 虽然时间复杂度相对较高，但是同样也有好处
