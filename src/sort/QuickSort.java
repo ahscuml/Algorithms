@@ -26,8 +26,6 @@ public class QuickSort {
             if (arr[i].compareTo(e) < 0) {
                 j++;
                 swap(arr, j, i);
-            } else {
-                i++;
             }
         }
         swap(arr, l, j);
